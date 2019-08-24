@@ -15,9 +15,9 @@ include "vendor/autoload.php";
 
 $system = new ComparisonSystem();
 
-var_dump($system->compare(3500));
-var_dump($system->compare(4500));
-var_dump($system->compare(6000));
+var_dump($system->getTariffsByYearlyConsumptionCost(3500));
+var_dump($system->getTariffsByYearlyConsumptionCost(4500));
+var_dump($system->getTariffsByYearlyConsumptionCost(6000));
 
 ```
 
