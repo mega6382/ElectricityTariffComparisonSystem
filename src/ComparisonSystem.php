@@ -31,7 +31,7 @@ class ComparisonSystem
      * @return array
      * @throws Exception
      */
-    public function getTariffsByYearlyConsumptionCost(float $yearlyConsumption): array
+    public function getTariffsSortedByYearlyConsumptionCost(float $yearlyConsumption): array
     {
         return $this->tariffSorter->getTariffs($yearlyConsumption);
     }

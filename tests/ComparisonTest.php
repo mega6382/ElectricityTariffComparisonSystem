@@ -12,7 +12,7 @@ final class ComparisonTest extends TestCase
 
     public function testCompare(): void
     {
-        $tariffs = $this->system->getTariffsByYearlyConsumptionCost(3500);
+        $tariffs = $this->system->getTariffsSortedByYearlyConsumptionCost(3500);
         $this->assertIsArray($tariffs);
 
         foreach ($tariffs as $tariff) {
@@ -23,7 +23,7 @@ final class ComparisonTest extends TestCase
 
     public function testAssignmentRequirements(): void
     {
-        $tariffs = $this->system->getTariffsByYearlyConsumptionCost(3500);
+        $tariffs = $this->system->getTariffsSortedByYearlyConsumptionCost(3500);
         $this->assertIsArray($tariffs);
 
         $this->assertEquals('Power Package', $tariffs[0]['name']);
@@ -35,7 +35,7 @@ final class ComparisonTest extends TestCase
 
     public function testAssignmentRequirements2(): void
     {
-        $tariffs = $this->system->getTariffsByYearlyConsumptionCost(4500);
+        $tariffs = $this->system->getTariffsSortedByYearlyConsumptionCost(4500);
         $this->assertIsArray($tariffs);
 
         $this->assertEquals('Power Package', $tariffs[0]['name']);
@@ -47,7 +47,7 @@ final class ComparisonTest extends TestCase
 
     public function testAssignmentRequirements3(): void
     {
-        $tariffs = $this->system->getTariffsByYearlyConsumptionCost(6000);
+        $tariffs = $this->system->getTariffsSortedByYearlyConsumptionCost(6000);
         $this->assertIsArray($tariffs);
 
         $this->assertEquals('Simple Power Tariff', $tariffs[0]['name']);
